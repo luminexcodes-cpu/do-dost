@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - DO DOST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">DO DOST</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="setting.html" style="color: #00d2ff;">Setting</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="settings-container">
+        <h1>Settings</h1>
+        
+        <div class="setting-card">
+            <h3>Profile Settings</h3>
+            <div class="input-group">
+                <label>Change Name:</label>
+                <input type="text" placeholder="Enter new name">
+            </div>
+            <button class="btn">Save Changes</button>
+        </div>
+
+        <div class="setting-card">
+            <h3>Appearance</h3>
+            <p>Choose your favorite theme.</p>
+            <button class="btn theme-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        </div>
+
+        <div class="setting-card">
+            <h3>Account</h3>
+            <button class="btn logout-btn">Logout</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
