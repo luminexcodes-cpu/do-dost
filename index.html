@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DO DOST</title>
+    <title>DO DOST | Luminex Codes</title>
     
     <link rel="stylesheet" href="style.css">
     
     <link rel="icon" type="image/x-icon" href="photo/gulshan.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
@@ -15,66 +17,108 @@
         <nav class="navbar">
             <div class="logo">DO DOST</div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="setting.html">Setting</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="setting.html">Settings</a></li>
             </ul>
+
+            <div class="profile-container">
+                <img src="photo/gulshan.png" alt="Profile" class="nav-profile-img" onclick="toggleProfileMenu()">
+                <div class="profile-dropdown" id="profileMenu">
+                    <p>Bhai Gulshan</p>
+                    <hr>
+                    <a href="profile.html"><i class="fas fa-user"></i> My Profile</a>
+                    <a href="setting.html"><i class="fas fa-cog"></i> Settings</a>
+                    <a href="#" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <h1>Welcome to DO DOST</h1>
-            <p>Bhai, yahan tumhari website ka main content aayega.</p>
+            <div class="hero-content">
+                <h1>Luminex Codes & Games</h1>
+                <p>Welcome to the Boss's Territory. Hum sirf code nahi, games banate hain! Build, Code, and Conquer.</p>
+                <div class="hero-btns">
+                    <a href="service.html" class="insta-btn">See My Work</a>
+                    <a href="contact.html" class="insta-btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
         </section>
+
+        <section class="team-section">
+            <h2 class="section-title">The Masterminds</h2>
+            <div class="team-container">
+                <div class="member-card boss">
+                    <div class="badge">OWNER</div>
+                    <img src="photo/Screenshot 2026-05-11 175147.png" alt="Gulshan Boss">
+                    <h3>Gulshan Kumar</h3>
+                    <p class="role">Founder & CEO</p>
+                    <div class="socials">
+                        <a href="https://instagram.com/gullz__exe" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="badge worker">CONTRIBUTOR</div>
+                    <img src="photo/Screenshot 2026-05-11 155055.png" alt="Dost">
+                    <h3>Krishna Diwakar</h3>
+                    <p class="role">Lead Developer</p>
+                    <div class="socials">
+                        <a href="https://instagram.com/its_krishn_609/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="friends-section">
-    <h2>Best Friends</h2>
-    <div class="card-container">
-        <div class="friend-card">
-            <img src="photo/meri-photo.jpg" alt="Meri Photo">
-            <h3>gulu bhai</h3>
-            <p>me</p>
-            <a href="https://instagram.com/tumhari_id" target="_blank" class="insta-btn">Instagram</a>
-        </div>
+            <h2 class="section-title">Latest Creations</h2>
+            <div class="card-container">
+                <div class="friend-card">
+                    <img src="photo/game-thumbnail.jpg" alt="Project 1">
+                    <h3>Battle Arena</h3>
+                    <p>Action Packed Game</p>
+                </div>
 
-        <div class="friend-card">
-            <img src="photo/Screenshot 2026-05-11 155055.png" alt="Dost ki Photo">
-            <h3>krishna shooter</h3>
-            <p>Jigar ka Tukda</p>
-            <a href="https://instagram.com/dost_ki_id" target="_blank" class="insta-btn">Instagram</a>
-        </div>
-    </div>
-</section>
-<section class="team-section">
-    <h2>Meet the Team</h2>
-    <div class="team-container">
-        
-        <div class="member-card boss">
-            <div class="badge">OWNER</div>
-            <img src="photo/gulshan.png" alt="Boss">
-            <h3>Gulshan Kumar</h3>
-            <p class="role">Founder & CEO</p>
-            <div class="socials">
-                <a href="https://instagram.com/gullz__exe" target="_blank">Instagram</a>
+                <div class="friend-card">
+                    <img src="photo/web-thumbnail.jpg" alt="Project 2">
+                    <h3>Luminex Dashboard</h3>
+                    <p>Modern Web UI</p>
+                </div>
             </div>
-        </div>
-
-        <div class="member-card">
-            <div class="badge worker">CONTRIBUTOR</div>
-            <img src="photo/Screenshot 2026-05-11 155055.png" alt="Dost">
-            <h3>krishna diwakar</h3>
-            <p class="role">Web Developer</p>
-            <div class="socials">
-                <a href="https://instagram.com/its_krishn_609/" target="_blank">Instagram</a>
-            </div>
-        </div>
-
-    </div>
-</section>
+        </section>
     </main>
 
-    <script src="script.js"></script>
+    <footer class="main-footer">
+        <p>&copy; 2026 Luminex Codes | Crafted by <span style="color:#ff9900">Gulshan Boss</span></p>
+        <div class="footer-links">
+            <a href="index.html">Home</a> | 
+            <a href="about.html">About</a> | 
+            <a href="contact.html">Support</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleProfileMenu() {
+            const menu = document.getElementById('profileMenu');
+            menu.classList.toggle('active');
+        }
+
+        // Click bahar ho toh menu band ho jaye
+        window.onclick = function(event) {
+            if (!event.target.matches('.nav-profile-img')) {
+                const dropdowns = document.getElementsByClassName("profile-dropdown");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('active')) {
+                        openDropdown.classList.remove('active');
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 </html>

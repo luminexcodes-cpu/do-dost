@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile | Boss</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">DO DOST</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <main class="profile-edit-container">
+        <div class="profile-card">
+            <h2>User Profile</h2>
+            
+            <div class="profile-pic-section">
+                <img src="--" id="display-pic" alt="Profile">
+                <input type="file" id="upload-pic" style="display: none;" accept="image/*">
+                <button class="edit-pic-btn" onclick="document.getElementById('upload-pic').click()">Change Photo</button>
+            </div>
+
+            <div class="info-group">
+                <label>Name:</label>
+                <div class="input-wrapper">
+                    <span id="name-val">--------</span>
+                    <input type="text" id="name-input" style="display:none;">
+                </div>
+            </div>
+
+            <div class="info-group">
+                <label>Email:</label>
+                <div class="input-wrapper">
+                    <span id="email-val">--------</span>
+                    <input type="email" id="email-input" style="display:none;">
+                </div>
+            </div>
+
+            <div class="profile-actions">
+                <button id="edit-btn" onclick="enableEdit()" class="btn">Edit Profile</button>
+                <button id="save-btn" onclick="saveChanges()" class="btn save-btn" style="display:none;">Save Changes</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Profile Edit ki Logic
+        function enableEdit() {
+            // Text ko chhupao aur Input ko dikhao
+            document.getElementById('name-val').style.display = 'none';
+            document.getElementById('name-input').style.display = 'block';
+            document.getElementById('name-input').value = document.getElementById('name-val').innerText;
+
+            document.getElementById('email-val').style.display = 'none';
+            document.getElementById('email-input').style.display = 'block';
+            document.getElementById('email-input').value = document.getElementById('email-val').innerText;
+
+            // Buttons ko badlo
+            document.getElementById('edit-btn').style.display = 'none';
+            document.getElementById('save-btn').style.display = 'inline-block';
+        }
+
+        function saveChanges() {
+            // Input se value lekar wapas text mein daalo
+            document.getElementById('name-val').innerText = document.getElementById('name-input').value;
+            document.getElementById('email-val').innerText = document.getElementById('email-input').value;
+
+            // Wapas normal kar do
+            document.getElementById('name-val').style.display = 'block';
+            document.getElementById('name-input').style.display = 'none';
+            document.getElementById('email-val').style.display = 'block';
+            document.getElementById('email-input').style.display = 'none';
+
+            document.getElementById('edit-btn').style.display = 'inline-block';
+            document.getElementById('save-btn').style.display = 'none';
+
+            alert("Bhai, Profile Update ho gayi!");
+        }
+
+        // Photo Change karne ka code
+        document.getElementById('upload-pic').addEventListener('change', function(event) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                document.getElementById('display-pic').src = reader.result;
+            };
+            reader.result && reader.readAsDataURL(event.target.files[0]);
+        });
+    </script>
+</body>
+</html>
